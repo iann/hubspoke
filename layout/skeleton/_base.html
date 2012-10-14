@@ -21,7 +21,8 @@
 
     {% block css %}
 
-    <link rel="stylesheet" href="{{site.url}}/media/css/base.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{site.url}}/media/css/lib.min/bootstrap.min.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="{{site.url}}/media/css/lib.min/bootstrap-responsive.min.css" type="text/css" charset="utf-8">
 
     {% block extra_css %}
     {% endblock %}
@@ -30,7 +31,7 @@
     
     {% block js %}
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script src="{{site.url}}/media/js/lib.min/jquery.js"></script>
 
     {% block extra_js %}
     {% endblock %}
