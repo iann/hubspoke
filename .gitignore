@@ -5,6 +5,6 @@ local_settings.py
 
 .DS_Store
 
-.Rhistory
-
 deploy/*
+
+.hyde_deps
