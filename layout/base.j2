@@ -52,6 +52,8 @@
       {% block container %}
 
       <div class="content">
+        {% block viz %}
+        {% endblock %}
         {# This is where the bulk of the content will go #}
         {% block content %}
         {% endblock %}
@@ -89,6 +91,8 @@
     {% block d3_js %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/lib/d3.v2.js"><\/script>')</script>
+
+    <script>window.jQuery || document.write('<script src="js/viz.js"><\/script>')</script>
 
     <!-- <script src="{{ media_url('js/lib/d3.v2.js') }}"></script> -->
 

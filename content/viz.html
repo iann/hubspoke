@@ -1,0 +1,34 @@
+---
+title: Index Page
+description: Test description
+---
+
+{% extends "topbar.j2" %}
+
+{% block css %}
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
+{% endblock css %}
+
+{#
+    You can put the HTML in the "content" folder but it's not recommended. The aim of Hyde is to abstract the
+    presentation layer. So this is more of an example of what not to do. I just didn't want to clutter the layouts
+    folder any more.
+ #}
+{% block viz %}
+something
+  <!-- Example row of columns -->
+<!-- Main hero unit for a primary marketing message or call to action -->
+<!-- <div class="hero-unit">
+  <h1>Hello, world3!</h1>
+  <p>Put graph here</p>
+  <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>-->
+
+
+
+{% endblock viz %}
