@@ -64,6 +64,7 @@ d3.csv("flights-airport.csv", function(flights) {
         return true;
       }
     });
+    
 
     // Compute the Voronoi diagram of airports' projected positions.
     var polygons = d3.geom.voronoi(positions);
