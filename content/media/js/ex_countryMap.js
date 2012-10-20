@@ -27,14 +27,14 @@ d3.select("input[type=checkbox]").on("change", function() {
   cells.classed("voronoi", this.checked);
 });
 
-d3.json("http://mbostock.github.com/d3/talk/20111116/us-states.json", function(collection) {
+d3.json("media/js/countryMap/us-states.json", function(collection) {
   states.selectAll("path")
       .data(collection.features)
     .enter().append("svg:path")
       .attr("d", path);
 });
 
-d3.csv("flights-airport.csv", function(flights) {
+d3.csv("media/js/countryMap/flights-airport.csv", function(flights) {
   var linksByOrigin = {},
       countByAirport = {},
       locationByAirport = {},
@@ -53,7 +53,7 @@ d3.csv("flights-airport.csv", function(flights) {
     countByAirport[destination] = (countByAirport[destination] || 0) + 1;
   });
 
-  d3.csv("airports.csv", function(airports) {
+  d3.csv("media/js/countryMap/airports.csv", function(airports) {
 
     // Only consider airports with at least one flight.
     airports = airports.filter(function(airport) {
