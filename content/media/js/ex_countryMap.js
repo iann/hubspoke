@@ -4,7 +4,7 @@ var w = 1280,
 var projection = d3.geo.azimuthal()
     .mode("equidistant")
     .origin([-98, 38])
-    .scale(1400)
+    .scale(900)
     .translate([640, 360]);
 
 var path = d3.geo.path()
