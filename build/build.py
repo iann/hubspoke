@@ -4,10 +4,11 @@ from fabricate import *
 import shutil
 import os
 
+setup(dirs=['..', '../content', '../data'])
+
 def runHyde():
-    args = ['-s', '..', 'gen']
-    shell('hyde', args, silent=False)
-    shutil.move('../deploy', './target/hyde_generated')
+    run('hyde', '-s', '..', 'gen')
+    shutil.copytree('../deploy', './target/site')
 
 def clean():
     shutil.rmtree('target', ignore_errors=True)

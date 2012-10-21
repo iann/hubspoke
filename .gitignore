@@ -8,5 +8,6 @@ local_settings.py
 deploy/*
 
 build/target/*
+build/.deps
 
 .hyde_deps
