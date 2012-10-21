@@ -1,0 +1,66 @@
+---
+title: Index Page
+description: Test description
+---
+
+{% extends "viz.j2" %}
+
+{% block css %}
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    #states path {
+      fill: #ccc;
+      stroke: #fff;
+    }
+
+    path.arc {
+      pointer-events: none;
+      fill: none;
+      stroke: #000;
+      display: none;
+    }
+
+    path.cell {
+      fill: none;
+      pointer-events: all;
+    }
+
+    circle {
+      fill: steelblue;
+      fill-opacity: .8;
+      stroke: #fff;
+    }
+
+    #cells.voronoi path.cell {
+      stroke: brown;
+    }
+
+    #cells g:hover path.arc {
+      display: inherit;
+    }
+
+        
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="{{ media_url('dev.examples/countryMap/style.css') }}"></link>
+    
+
+{% endblock css %}
+something!
+
+{% block viz %}
+{#
+    You can put the HTML in the "content" folder but it's not recommended. The aim of Hyde is to abstract the
+    presentation layer. So this is more of an example of what not to do. I just didn't want to clutter the layouts
+    folder any more.
+ #}
+
+{% endblock viz %}
+
+{% block customscripts %}
+<script src="{{ media_url('dev.examples/countryMap/ex_countryMap.js') }}"></script>
+{% endblock customscripts %}
