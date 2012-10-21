@@ -5,9 +5,6 @@ description: Test description
 
 {% extends "viz.j2" %}
 
-
-
-
 {% block css %}
   <style>
     body {
@@ -49,9 +46,12 @@ description: Test description
         
   </style>
 
+  <link rel="stylesheet" type="text/css" href="{{ media_url('js/countryMap/style.css') }}"></link>
     
-  <link rel="stylesheet" type="text/css" href="media/js/countryMap/style.css"></link>
+
 {% endblock css %}
+
+{% block viz %}
 
 {#
     You can put the HTML in the "content" folder but it's not recommended. The aim of Hyde is to abstract the
@@ -59,18 +59,8 @@ description: Test description
     folder any more.
  #}
 
- 
-{% block viz %}
-
-hi
-  <!-- Example row of columns -->
-<!-- Main hero unit for a primary marketing message or call to action -->
-<!-- <div class="hero-unit">
-  <h1>Hello, world3!</h1>
-  <p>Put graph here</p>
-  <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>-->
-
-
-
 {% endblock viz %}
+
+{% block customscripts %}
+<script src="{{ media_url('js/ex_countryMap.js') }}"></script>
+{% endblock customscripts %}
