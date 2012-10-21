@@ -5,9 +5,6 @@ description: Test description
 
 {% extends "viz.j2" %}
 
-
-
-
 {% block css %}
   <style>
     body {
@@ -23,7 +20,7 @@ description: Test description
     path.arc {
       pointer-events: none;
       fill: none;
-      stroke: #f00;
+      stroke: #000;
       display: none;
     }
 
@@ -49,30 +46,21 @@ description: Test description
         
   </style>
 
+  <link rel="stylesheet" type="text/css" href="{{ media_url('dev.examples/countryMap/style.css') }}"></link>
     
-  <link rel="stylesheet" type="text/css" href="media/js/countryMap/style.css"></link>
-{% endblock css %}
 
+{% endblock css %}
+something!
+
+{% block viz %}
 {#
     You can put the HTML in the "content" folder but it's not recommended. The aim of Hyde is to abstract the
     presentation layer. So this is more of an example of what not to do. I just didn't want to clutter the layouts
     folder any more.
  #}
 
- 
-{% block viz %}
-
-hi
-  <!-- Example row of columns -->
-<!-- Main hero unit for a primary marketing message or call to action -->
-<!-- <div class="hero-unit">
-  <h1>Hello, world3!</h1>
-  <p>Put graph here</p>
-  <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>-->
-
 {% endblock viz %}
 
 {% block customscripts %}
-<script src="{{ media_url('js/ex_countryMap_dupe.js') }}"></script>
+<script src="{{ media_url('dev.examples/countryMap/ex_countryMap.js') }}"></script>
 {% endblock customscripts %}
